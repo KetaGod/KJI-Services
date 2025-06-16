@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJI | Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Source Code Pro', monospace;
+    }
+    header {
+      width: 100%;
+      background-color: #111;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: color 0.3s ease;
+      text-shadow: 0 0 4px #aa00ff;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #aa00ff;
+    }
+    main {
+      padding: 6rem 2rem 2rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #aa00ff;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      background: #111;
+      border: 1px solid #aa00ff;
+      border-radius: 6px;
+      padding: 0.8rem;
+      color: #fff;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 1rem;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 6px #aa00ff99;
+    }
+    button {
+      width: fit-content;
+      align-self: flex-start;
+      background: #aa00ff22;
+      border: 1px solid #aa00ff;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #aa00ff66;
+    }
+    .alt-contacts {
+      margin-top: 2rem;
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+    }
+    .alt-contacts p {
+      margin: 0.5rem 0;
+    }
+    .alt-contacts a {
+      color: #aa00ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="tools.html">Tools/Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="forums.html">Forums</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="alt-contacts">
+      <h2>Alternate Contacts</h2>
+      <p>Telegram: <a href="https://t.me/KetaGod" target="_blank">@KetaGod</a></p>
+      <p>Email: <a href="mailto:ketagod666@proton.me">ketagod666@proton.me</a></p>
+    </div>
+  </main>
+</body>
+</html>

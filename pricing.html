@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJI | Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Source Code Pro', monospace;
+    }
+    header {
+      width: 100%;
+      background-color: #111;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: color 0.3s ease;
+      text-shadow: 0 0 4px #aa00ff;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #aa00ff;
+    }
+    main {
+      padding: 6rem 2rem 2rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #aa00ff;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .price-card {
+      background: #111;
+      border: 1px solid #aa00ff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 8px #aa00ffaa;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .price-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 14px #aa00ffdd;
+    }
+    .price-card h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      color: #aa00ff;
+      margin-top: 0;
+    }
+    .price-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .price-card ul li {
+      margin-bottom: 0.5rem;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    .price-card .price {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .price-card a.quote-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #aa00ff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      background: #aa00ff22;
+      transition: background 0.3s ease;
+      font-size: 0.85rem;
+    }
+    .price-card a.quote-btn:hover {
+      background: #aa00ff66;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="tools.html">Tools/Projects</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="forums.html">Forums</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Pricing</h1>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h2>OSINT Work</h2>
+        <ul>
+          <li>Got someone bugging you? I'll find out who.</li>
+          <li>Includes phone, username, social, etc. tracing</li>
+          <li>Proofs included</li>
+        </ul>
+        <p class="price">Starts at $40</p>
+        <a href="contact.html" class="quote-btn" target="_blank">Get a Quote</a>
+      </div>
+
+      <div class="price-card">
+        <h2>Stress-Testing</h2>
+        <ul>
+          <li>Wanna see if your server or site holds up?</li>
+          <li>I’ll run a test and let you know if it breaks</li>
+          <li>Fully logged and proofed</li>
+        </ul>
+        <p class="price">Starts at $50</p>
+        <a href="contact.html" class="quote-btn">Get a Quote</a>
+      </div>
+
+      <div class="price-card">
+        <h2>Web Development</h2>
+        <ul>
+          <li>I’ll make you a clean, functional site</li>
+          <li>From scratch or based on your vision</li>
+          <li>Includes hosting setup + styling</li>
+        </ul>
+        <p class="price">As low as $100</p>
+        <a href="contact.html" class="quote-btn">Get a Quote</a>
+      </div>
+
+      <div class="price-card">
+        <h2>Custom Services</h2>
+        <ul>
+          <li>Got something else in mind?</li>
+          <li>DM me with details</li>
+          <li>I’ll let you know if it's doable</li>
+        </ul>
+        <p class="price">Custom rate</p>
+        <a href="contact.html" class="quote-btn" target="_blank">Get a Quote</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJI | Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background: #000;
+      color: #00ff00;
+      font-family: 'Source Code Pro', monospace;
+    }
+    header {
+      width: 100%;
+      background-color: #111;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: color 0.3s ease;
+      text-shadow: 0 0 4px #aa00ff;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #aa00ff;
+    }
+    main {
+      padding: 6rem 2rem 2rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .terminal {
+      background: #111;
+      border: 1px solid #333;
+      padding: 1rem;
+      border-radius: 8px;
+      min-height: 300px;
+      box-shadow: 0 0 10px #0f0;
+    }
+    .output {
+      white-space: pre-wrap;
+      margin-bottom: 1rem;
+    }
+    .input-line {
+      display: flex;
+      align-items: center;
+    }
+    .input-line span {
+      margin-right: 0.5rem;
+    }
+    .input-line input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #0f0;
+      font-family: inherit;
+      font-size: 1rem;
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="tools.html">Tools/Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="forums.html">Forums</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="terminal" id="terminal">
+      <div class="output" id="output">guest@kji:~$ Type 'help' for available commands.</div>
+      <div class="input-line">
+        <span>guest@kji:~$</span>
+        <input type="text" id="terminalInput" autofocus autocomplete="off">
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const input = document.getElementById('terminalInput');
+    const output = document.getElementById('output');
+    const history = [];
+    let historyIndex = -1;
+
+    const commands = {
+      help: `Available commands:\n- tracing\n- osint\n- stress-test\n- webdev\n- misc`,
+      "tracing": `Phone #, IP and GeoIP Tracing:\nOffering services to help figure out who's been getting into your shit or figuring out who has been calling you randomly.`,
+      "osint": `OSINT Work:\nBeing harassed? Wanna know more about someone? Being blackmailed? Then this is the right option for you :p`,
+      "stress-test": `DoS/DDoS Stresstesting:\nWanna test the security of your website or a server that you run? Then try this out.`,
+      "webdev": `Web Development:\nDon't wanna go through the hassle of making your own website? Let us do it for you!`,
+      "misc": `Misc Option:\nFor more services, contact KetaGod on Telegram and ask about \"our other services\".`,
+      clear: ""
+    };
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const cmd = input.value.trim();
+        history.push(cmd);
+        historyIndex = history.length;
+        const response = commands[cmd] !== undefined ? commands[cmd] : `Command not found: ${cmd}`;
+        output.innerText += `\n\nguest@kji:~$ ${cmd}\n${response}`;
+        if (cmd === 'clear') {
+          output.innerText = "";
+        }
+        input.value = '';
+      } else if (e.key === 'ArrowUp') {
+        if (historyIndex > 0) {
+          historyIndex--;
+          input.value = history[historyIndex];
+        }
+      } else if (e.key === 'ArrowDown') {
+        if (historyIndex < history.length - 1) {
+          historyIndex++;
+          input.value = history[historyIndex];
+        } else {
+          input.value = '';
+        }
+      } else if (e.key === 'Tab') {
+        e.preventDefault();
+        const match = Object.keys(commands).find(cmd => cmd.startsWith(input.value));
+        if (match) input.value = match;
+      }
+    });
+  </script>
+</body>
+</html>

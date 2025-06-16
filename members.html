@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJI | Members</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background-color: #000;
+      margin: 0;
+    }
+
+    .members {
+      padding: 2rem;
+      color: #fff;
+      font-family: 'Source Code Pro', monospace;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .member-card {
+      background: #111;
+      border: 1px solid #7700ff;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem 0;
+      display: flex;
+      gap: 1rem;
+      box-shadow: 0 0 12px #aa00ff, 0 0 24px #aa00ff44;
+      align-items: flex-start;
+    }
+
+    .member-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .member-info {
+      flex-grow: 1;
+    }
+
+    .member-info h2 {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #c26bff;
+    }
+
+    .member-info p {
+      margin: 0.5rem 0;
+    }
+
+    .badges {
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      margin: 0.2rem 0.4rem 0 0;
+      border-radius: 4px;
+      background: #aa00ff22;
+      border: 1px solid #aa00ff;
+      color: #fff;
+      text-shadow: 0 0 3px #aa00ff;
+    }
+
+    .social-links {
+      margin-top: 0.5rem;
+    }
+
+    .social-links a {
+      margin-right: 1rem;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #7700ff;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+      background: #7700ff22;
+    }
+
+    .social-links a:hover {
+      background: #aa00ff66;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="members.html" class="active">Members</a></li>
+        <li><a href="tools.html">Tools/Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="forums.html">Forums</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="members">
+    <h1>Group Members</h1>
+
+    <div class="member-card">
+      <img src="assets/images/love.gif" alt="KetaGod pfp">
+      <div class="member-info">
+        <h2>KetaGod</h2>
+        <p>Founder | Gray Hat Hacker | Specializes in WebDev & Cybersecurity</p>
+        <div class="badges">
+          <span class="badge">Founder</span>
+        </div>
+        <div class="social-links">
+          <a href="https://x.com/ketagod666v2" target="_blank">Twitter</a>
+          <a href="https://t.me/KetaGod" target="_blank">Telegram</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
