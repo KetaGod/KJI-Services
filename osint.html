@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KJI | OSINT Tiers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Source Code Pro', monospace;
+    }
+    header {
+      width: 100%;
+      background-color: #111;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: color 0.3s ease;
+      text-shadow: 0 0 4px #aa00ff;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #aa00ff;
+    }
+    main {
+      padding: 6rem 2rem 2rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #aa00ff;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .osint-tier {
+      background: #111;
+      border: 1px solid #aa00ff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 8px #aa00ffaa;
+    }
+    .osint-tier h2 {
+      font-size: 1.3rem;
+      color: #c26bff;
+    }
+    .osint-tier p {
+      color: #ccc;
+      line-height: 1.6;
+      margin: 0.5rem 0 1rem;
+    }
+    .osint-tier .price {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .osint-tier a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #aa00ff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      background: #aa00ff22;
+      transition: background 0.3s ease;
+      font-size: 0.9rem;
+    }
+    .osint-tier a:hover {
+      background: #aa00ff66;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="tools.html">Tools/Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="forums.html">Forums</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>OSINT Service Tiers</h1>
+
+    <div class="osint-tier">
+      <h2>Basic OSINT – $40</h2>
+      <p>Light level of work. I'll get you: Names, Usernames, Socials, Phone Numbers, and IP Addresses</p>
+      <a href="https://buy.stripe.com/dRm6oH7sVdQ57exdk273G02" target="_blank">Purchase via Stripe</a>
+    </div>
+
+    <div class="osint-tier">
+      <h2>Deep Dive OSINT – $80</h2>
+      <p>Heavier level of work. You'll get everything the Basic option includes but you also get: Data Leaks and a Nearly Full Background Check</p>
+      <a href="https://buy.stripe.com/3cI6oHbJb6nD42lfsa73G00" target="_blank">Purchase via Stripe</a>
+    </div>
+
+  </main>
+</body>
+</html>
